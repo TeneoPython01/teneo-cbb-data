@@ -18,6 +18,8 @@ db = dbutil.Database()
 cbb_data = cbb.cbbData()
 
 #load the watchlist schedules to the database
-db.ingest(cbb_data.watchlist_schedule, 'cbb_schedule_tmp', 'replace')
+db.ingest(cbb_data.watchlist_schedule, 'cbb_schedule', 'replace')
+db.ingest(cbb_data.rankings, 'cbb_rankings', 'replace')
 
 #print(cbb_data.watchlist_schedule)
+#print(cbb_data.rankings)
